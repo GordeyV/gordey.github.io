@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>{{ page.title }} · {{ site.title }}</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    {%- seo -%}
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+<aside class="sidebar">
+    <div class="brand">
+        <!-- You can replace the circle with your own image -->
+        <div class="logo-circle"></div>
+        <span class="brand-name">{{ site.title }}</span>
+    </div>
+
+    <nav class="nav">
+        <a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active"{% endif %}>Posts</a>
+        <a href="{{ '/about/' | relative_url }}" {% if page.url contains '/about/' %}class="active"{% endif %}>About</a>
+    </nav>
+</aside>
+
+<main class="content">
+    {{ content }}
+</main>
+
+<script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+</body>
+</html>

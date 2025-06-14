@@ -1,0 +1,18 @@
+title: "My Tech Blog"
+description: "Musings on code, clouds & keyboards"
+baseurl: ""          # ⇢ leave blank (we use project‑root pages)
+url: ""              # ⇢ GitHub Pages will fill this at runtime
+theme: null          # we supply our own layouts/CSS
+markdown: kramdown
+highlighter: rouge
+permalink: /posts/:title/
+collections: []
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
